@@ -1,0 +1,16 @@
+// ======================================================================== //
+// Import
+// ======================================================================== //
+@import "mainnav";
+@import "nav";
+@import "affix";
+@import "alert";
+@import "cookie-banner";
+@import "select";
+@import "input-group";
+@import "cartbox";
+@import "localbox";
+@import "footer";
+
+// Create node_module package instead
+@import "../../../../../../app/system/assets/ui/scss/components/icons";
