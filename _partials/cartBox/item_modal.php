@@ -94,12 +94,13 @@
                 ? lang('igniter.cart::default.button_update')
                 : lang('igniter.cart::default.button_add_to_order');
               ?>
-              <span class="pull-right" data-item-subtotal>
+              <span id="price" class="pull-right" data-item-subtotal>
                 <?= currency_format($cartItem
                   ? $cartItem->subtotal
                   : $menuItem->getBuyablePrice());
                 ?>
               </span>
+              <!-- <span id="price"></span> -->
             </button>
           </div>
         </div>
@@ -107,3 +108,23 @@
     </div>
   </form>
 </div>
+
+
+<script>
+  $(".modal-body").on("click", "input:checkbox", function () {
+    var $this = $(this);
+    var $total = $("#price");
+    var $target = $("label[for='" + $this.attr("id") + "']");
+    
+    var item_value = +($target.html().replace(/[^\d\.]/g, '') || 0.00);
+    var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
+
+    if ($this.prop("checked") === true) {
+      current_total += item_value;
+    } else {
+      current_total -= item_value;
+    }
+    
+    $total.html("$" + current_total.toFixed(2));
+});
+</script>
