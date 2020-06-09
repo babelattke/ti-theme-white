@@ -6,13 +6,17 @@
     ],
     "css": [
         {
-            "path": "tastyigniter-ufmedia/assets/css/ti-white.css",
-            "name": "ti-white-css"
+            "path": "tastyigniter-ufmedia/assets/css/ti-ufmedia.css",
+            "name": "ti-ufmedia-css"
         }, 
         {
             "path": "tastyigniter-ufmedia/assets/css/bootstrap.min.css",
             "name": "bootstrap-css"
-        }, 
+        },          
+        {
+            "path": "tastyigniter-ufmedia/assets/css/pretty-checkbox.min.css",
+            "name": "pretty-checkbox-css"
+        },
         {
             "path": "tastyigniter-ufmedia/assets/css/app.css",
             "name": "main-app-css"
@@ -24,8 +28,8 @@
     ],
     "js": [
         {
-            "path": "tastyigniter-ufmedia/assets/js/ti-white.js",
-            "name": "ti-white-js"
+            "path": "tastyigniter-ufmedia/assets/js/ti-ufmedia.js",
+            "name": "ti-ufmedia-js"
         },
         {
             "path": "tastyigniter-ufmedia/assets/js/bootstrap.min.js",
@@ -36,8 +40,8 @@
             "name": "popper-js"
         },
         {
-            "path": "tastyigniter-ufmedia/assets/js/ti-white-custom.js",
-            "name": "ti-white-custom-js"
+            "path": "tastyigniter-ufmedia/assets/js/ti-ufmedia-custom.js",
+            "name": "ti-ufmedia-custom-js"
         },
         {
             "path": "tastyigniter-ufmedia/assets/js/aos.js",
@@ -47,8 +51,8 @@
     "bundles": [
         {
           "type": "scss",
-          "files": "~/themes/tastyigniter-ufmedia/assets/src/scss/ti-white.scss",
-          "destination": "~/themes/tastyigniter-ufmedia/assets/css/ti-white.css"
+          "files": "~/themes/tastyigniter-ufmedia/assets/src/scss/ti-ufmedia.scss",
+          "destination": "~/themes/tastyigniter-ufmedia/assets/css/ti-ufmedia.css"
         }
     ]
 }

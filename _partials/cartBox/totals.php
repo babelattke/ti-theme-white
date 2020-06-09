@@ -10,7 +10,7 @@
                         <?= lang('igniter.cart::default.text_sub_total'); ?>:
                    </span>
                     </td>
-                    <td class="text-right">
+                    <td class="price text-right">
                         <?= currency_format($cart->subtotal()); ?>
                     </td>
                 </tr>
@@ -31,7 +31,7 @@
                             <?php } ?>
                        </span>
                         </td>
-                        <td class="text-right">
+                        <td class="price text-right">
                             <?= is_numeric($result = $condition->getValue())
                                 ? currency_format($result)
                                 : $result; ?>
@@ -45,7 +45,7 @@
                         <?= lang('igniter.cart::default.text_order_total'); ?>:
                    </span>
                     </td>
-                    <td class="text-right">
+                    <td class="price text-right">
                         <?= currency_format($cart->total()); ?>
                     </td>
                 </tr>

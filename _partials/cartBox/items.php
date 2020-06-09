@@ -19,7 +19,7 @@
                         data-menu-id="<?= $cartItem->id; ?>"
                     >
                         <span class="name">
-                            <?php if ($cartItem->qty > 1) { ?>
+                            <?php if ($cartItem->qty > 0) { ?>
                                 <span class="quantity font-weight-bold">
                                     <?= $cartItem->qty.' '.lang('igniter.cart::default.text_times'); ?>
                                 </span>

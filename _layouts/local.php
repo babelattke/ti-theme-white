@@ -43,13 +43,13 @@ description: 'Local layout'
         <div id="page-wrapper">
             <div class="container">
                 <div class="row py-4">
-                    <div class="col-sm-2 d-none d-sm-inline-block">
+                    <!-- <div class="col-sm-2 d-none d-sm-inline-block">
                         <div class="categories affix-categories">
-                            <?= component('categories'); ?>
+                        < ?= partial('categories::default')?>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-8">
                         <div class="content">
                             <?= component('localBox'); ?>
 

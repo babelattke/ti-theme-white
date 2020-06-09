@@ -19,9 +19,7 @@ layout: local
 <div class="panel">
     <div class="d-block d-sm-none">
         <div class="panel-body categories">
-            <?= partial('categories::default')?>
-           
-            <!-- < ?= component('categories'); ?> -->
+            <!-- < ?= partial('categories::default')?> -->
         </div>
     </div>  
     <?= component('localMenu') ?>

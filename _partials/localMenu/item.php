@@ -6,7 +6,7 @@ $specialActive = ($special AND $special->active());
 $menuHasOptions = $menuItem->hasOptions();
 $menuPrice = $specialActive ? $special->getMenuPrice($menuItem->menu_price) : $menuItem->menu_price;
 ?>
-<div id="menu<?= $menuItem->menu_id; ?>" data-aos="fade-left" data-aos-delay="100">
+<div id="menu<?= $menuItem->menu_id; ?>">
     <div class="menu-item-card">          
         <?php if ($showMenuImages == 1 AND $menuItem->hasMedia('thumb')) { ?>
             <div class="menu-item-img" 
@@ -17,13 +17,16 @@ $menuPrice = $specialActive ? $special->getMenuPrice($menuItem->menu_price) : $m
                     background-repeat: no-repeat;
                     float : left;
                     position : relative; 
-                    width: 25%;	                
+                    width: 45%;	              
                     ">             
             </div>
         <?php } ?> 
         <div class="menu-item-info">
             <div class="menu-item-price">
                 <span><?= $menuPrice > 0 ? currency_format($menuPrice) : lang('main::lang.text_free'); ?></span>
+            </div>
+            <div class="menu-item-qty">
+                <span></span>
             </div>
             <h4><?= e($menuItem->menu_name); ?></h4>
             <p class="text-muted"><?= nl2br($menuItem->menu_description); ?></p>
@@ -46,7 +49,7 @@ $menuPrice = $specialActive ? $special->getMenuPrice($menuItem->menu_price) : $m
                         ); ?>"
                     <?php } ?>
                 >
-                    <i class="fa fa-<?= $mealtimeNotAvailable ? 'clock-o' : '' ?>"></i>Add
+                    <i class="fa fa-<?= $mealtimeNotAvailable ? 'clock-o' : 'plus' ?>"></i>
                 </button>
             </div>
         </div>
