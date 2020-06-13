@@ -1,0 +1,1 @@
+<span id="cart-counter" class="pull-left"><?= $cart->count(); ?> <i class="fas fa-shopping-cart"></i></span>

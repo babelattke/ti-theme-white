@@ -9,9 +9,8 @@ permalink: /login
 '[account]':
 ---
 <div id="login">        
-    <div class="login-container" id="container">
-        
-        <div class="form-container sign-up-container">
+    <div class="login-container" id="container">        
+        <div class="sign-up-container form-container">
             <?php if ($canRegister) { ?>
             <?= form_open(current_url(),
                 [
@@ -78,7 +77,7 @@ permalink: /login
             <?php } ?>
         </div>       
 
-        <div class="form-container sign-in-container">
+        <div class="sign-in-container form-container">
             <?= form_open(current_url(),
                 [
                     'role' => 'form',

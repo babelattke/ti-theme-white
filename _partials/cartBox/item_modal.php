@@ -27,7 +27,7 @@
         </div>
       <?php } ?>
 
-      <div class="modal-body">  
+      <div class="modal-body">    
         <!-- <button
           type="button"
           class="close px-2"
@@ -46,7 +46,9 @@
           class="menu-options"
           data-control="item-options"
         >
+        <div id="accordionOptions" class="accordion">
           <?= partial('@item_options'); ?>
+        </div>
         </div>
 
         <div class="pt-3">

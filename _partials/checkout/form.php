@@ -17,6 +17,10 @@
     <?= partial('@payments'); ?>
 </div>
 
+<div class="my-3">
+    <?= partial('@cart_items'); ?>
+</div>
+
 <div class="form-group">
     <label for="comment"><?= lang('igniter.cart::default.checkout.label_comment'); ?></label>
     <textarea

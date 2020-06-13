@@ -42,11 +42,13 @@
         <?= partial('@buttons'); ?>
     <?php } else if (!$pageIsCart) { ?>
         <a
-            class="btn btn-primary btn-block btn-lg radius-none cart-toggle text-nowrap"
+            class="btn btn-add-item btn-block btn-lg radius-none cart-toggle text-nowrap"
             href="<?= site_url('cart') ?>"
         >
+            <?= partial('@cart_counter'); ?>
+            
             <?= lang('igniter.cart::default.text_heading'); ?>:
-            <span id="cart-total" class="font-weight-bold"><?= currency_format($cart->total()); ?></span>
+            <span id="cart-total" class="font-weight-bold"><?= currency_format($cart->total()); ?></span>            
         </a>
     <?php } ?>
 </div>

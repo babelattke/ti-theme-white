@@ -32,8 +32,9 @@
 
     /* UF Media Main Colors */
 
-    --main-c: #F8981D;
+    --main-c:  #F8981D;
     --main-bg: #fcedd2;
+    --main2-c: #ecae5d;
 }
 
 body {
@@ -716,6 +717,7 @@ a.nav-item.nav-link:hover {
     font-weight: 200 !important;
     letter-spacing: 2px;
     border: none;
+    padding: 0 !important;
 }    
 
 .btn-add-item {
@@ -730,22 +732,25 @@ a.nav-item.nav-link:hover {
 .btn-minus {
     background: var(--main-c) !important;
     color: var(--white) !important;
-    border-top-left-radius: 30px !important;
-    border-bottom-left-radius: 30px !important;
+    border-radius:  50px !important;
+    /* border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important; */
 }
 
 .item-qty {
-    background: var(--main-c) !important;
-    color: var(--white) !important;
+    color: var(--main-c) !important;
+    background: var(--white) !important;
     -webkit-appearance: none !important;
     margin: 0 !important;    
+    border: none !important;
 }
 
 .btn-plus {
     background: var(--main-c) !important;
     color: var(--white) !important;
-    border-top-right-radius: 30px !important;
-    border-bottom-right-radius: 30px !important;
+    border-radius:  50px !important;
+    /* border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important; */
 }
 
 /* ITEM MODAL START */
@@ -795,153 +800,51 @@ div a.add-comment {
 
 /* TEST START */
 
-
-
-#steps {
-    text-align: center;
-    position: relative;
-    margin-top: 20px
+#accordionOptions h5 a {
+    text-transform: none !important;
+    text-decoration: none !important;
 }
 
-#steps section .form-card {
-    background: white;
-    border: 0 none;
-    border-radius: 0px;    
-    padding: 20px 40px 30px 40px;    
-    width: 50%;
-    margin: 0 3% 20px 3%;
-    position: relative
+#accordionOptions .card {
+    border: none !important;
 }
 
-#steps section {
-    background: white;
-    border: 0 none;
-    border-radius: 0.5rem;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding-bottom: 20px;
-    position: relative
+#accordionOptions .card-body {
+    padding: .3rem !important;    
 }
 
-#steps section:not(:first-of-type) {
-    display: none;
-}
-
-#steps section .form-card {
-    text-align: left;
-    color: #9E9E9E
-}
-
-#steps .action-button {
-    width: 100px;
-    background: skyblue;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px
-}
-
-#steps .action-button:hover,
-#steps .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
-}
-
-#steps .action-button-previous {
-    width: 100px;
-    background: #616161;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 0px;
-    cursor: pointer;
-    padding: 10px 5px;
-    margin: 10px 5px
-}
-
-#steps .action-button-previous:hover,
-#steps .action-button-previous:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
-}
-
-.fs-title {
-    font-size: 25px;
-    color: #2C3E50;
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-align: left
-}
-
-#progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    color: lightgrey
-}
-
-#progressbar .active {
-    color: #000000
-}
-
-#progressbar li {
-    list-style-type: none;
-    font-size: 12px;
-    width: 25%;
-    float: left;
-    position: relative
-}
-
-#progressbar #account:before {
-    font-family: FontAwesome;
-    content: "\f023"
-    
-}
-
-#progressbar #personal:before {
-    font-family: FontAwesome;
-    content: "\f007"
-}
-
-#progressbar #payment:before {
-    font-family: FontAwesome;
-    content: "\f09d"
-}
-
-#progressbar #confirm:before {
-    font-family: FontAwesome;
-    content: "\f00c"
-}
-
-#progressbar li:before {
-    width: 50px;
-    height: 50px;
-    line-height: 45px;
-    display: block;
-    font-size: 18px;
-    color: #ffffff;
-    background: lightgray;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-    padding: 2px
-}
-
-#progressbar li:after {
+.collapsible-link::before {
     content: '';
-    width: 100%;
+    width: 14px;
     height: 2px;
-    background: lightgray;
+    background: #333;
     position: absolute;
-    left: 0;
-    top: 25px;
-    z-index: -1
-}
-
-#progressbar li.active:before,
-#progressbar li.active:after {
-    background: skyblue
-}
+    top: calc(50% - 1px);
+    right: 1rem;
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  /* Vertical line */
+  .collapsible-link::after {
+    content: '';
+    width: 2px;
+    height: 14px;
+    background: #333;
+    position: absolute;
+    top: calc(50% - 7px);
+    right: calc(1rem + 6px);
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  .collapsible-link[aria-expanded='true']::after {    
+    transform: rotate(90deg) translateX(-1px);
+  }
+  
+  .collapsible-link[aria-expanded='true']::before {    
+    transform: rotate(180deg);
+  }
 
 
 /* TEST END */
@@ -1051,8 +954,7 @@ div a.add-comment {
 
     /* Checkout Start */
 .form-group label {
-    text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 2px;
     color: var(--main-c);
 }
@@ -1082,6 +984,29 @@ div h5 {
     font-size: 1.3rem;
     letter-spacing: 2px;   
 }
+
+.checkout-cart-items {
+    float: left !important;
+    padding: 0 1rem !important;   
+    border-bottom: none !important; 
+}
+
+.checkout-cart-items .quantity {
+    background-color: var(--main-c);
+    color: white;
+    border-radius: 50%;
+    margin: 0 4px;
+    height: 8.4em;
+    position: relative;
+    width: 8.4em;   
+}
+
+.quantity-content {
+    hyphens: auto;
+    margin: 0.75em;
+    text-align: center;
+}
+
     /* Checkout End */
 
     /* Login Page Custom CSS */
@@ -1094,7 +1019,7 @@ div h5 {
 	flex-direction: column;
 	font-family: "Poppins", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	height: 80vh;
-	margin: 20px 0 50px;
+	margin: 4rem 2rem;
 }
 
 #login h1 {
@@ -1134,8 +1059,8 @@ div h5 {
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
-  padding: 12px 45px;
-  margin-top: 5px;
+    padding: 12px 45px;
+    margin-top: 5px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
@@ -1189,20 +1114,20 @@ div h5 {
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
-	min-height: 480px;
+    min-height: 480px;    
 }
 
 .form-container {
 	position: absolute;
 	top: 0;
 	height: 100%;
-	transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;    
 }
 
 .sign-in-container {
 	left: 0;
 	width: 50%;
-	z-index: 2;
+    z-index: 2;    
 }
 
 .login-container.right-panel-active .sign-in-container {
@@ -1213,7 +1138,7 @@ div h5 {
 	left: 0;
 	width: 50%;
 	opacity: 0;
-	z-index: 1;
+    z-index: 1;      
 }
 
 .login-container.right-panel-active .sign-up-container {
@@ -1252,8 +1177,8 @@ div h5 {
 
 .overlay {
 	background: #FF416C;
-	background: -webkit-linear-gradient(to right, var(--main-c), var(--turquoise));
-	background: linear-gradient(to right, var(--turquoise), var(--main-c));
+	background: -webkit-linear-gradient(to right, var(--main-c), var(--main2-c));
+	background: linear-gradient(to right, var(--main2-c), var(--main-c));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -1316,6 +1241,51 @@ div h5 {
 	height: 40px;
 	width: 40px;
 }
+
+
+
+@media only screen and (max-width:750px){  
+
+    body > main {
+        padding-top: 10px !important;
+    }
+    
+    #login {       
+        margin: 0 2rem;
+    }
+
+    #login form {
+        padding: 0 20px;
+    }
+
+    .login-container {
+        transition: transform 1s;        
+        cursor: pointer;
+        position: relative;
+    }
+
+    .form-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .overlay-container {
+        display: none;
+    }
+
+    .sign-in-container, .sign-up-container {
+        width: 100%;  
+        justify-content: center;     
+    }
+      
+    
+}
+
+
+
 /* Login Page Custom CSS END */
 
 /* MyAccount Start */
