@@ -956,7 +956,8 @@ div a.add-comment {
 .form-group label {
     font-weight: 400;
     letter-spacing: 2px;
-    color: var(--main-c);
+    color: #6D6461;
+    /* color: var(--main-c); */
 }
 
 div h5 {
@@ -1006,6 +1007,30 @@ div h5 {
     margin: 0.75em;
     text-align: center;
 }
+
+/* Tip Button */
+
+.tip{
+    display: inline-block;
+    text-decoration: none;
+    background: var(--main-c);
+    color: #FFF;
+    width: 55px;
+    height: 55px;
+    line-height: 10px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px var(--main-c);
+    border: dashed 1px #FFF;
+    transition: .4s;
+  }
+  
+  .tip:hover{
+    background: var(--main2-c);
+     box-shadow: 0px 0px 0px 5px var(--main2-c);
+  }
 
     /* Checkout End */
 

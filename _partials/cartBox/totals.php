@@ -14,7 +14,11 @@
                         <?= currency_format($cart->subtotal()); ?>
                     </td>
                 </tr>
-
+                <!-- Tip -->
+                <?php
+					function tipamount($tip_perc, $subtotal){ return (( $tip_perc / 100 ) * $subtotal);}
+				?>
+                <!-- Tip end -->
                 <?php foreach ($cart->conditions() as $id => $condition) { ?>
                     <tr>
                         <td>
@@ -38,15 +42,59 @@
                         </td>
                     </tr>
                 <?php } ?>
-
+                <!-- Tip Start -->
+                <?php if(session()->has('mytip')){ 
+						$tip_amount = tipamount(Request::session()->get('mytip'),$cart->subtotal());
+						if((Request::session()->get('mytip')) !=0 ){		
+				?>
+				<tr>
+                    <td>
+                    <span class="price text-muted">
+                        Counter Tip:
+                   </span>
+                    </td>
+                    <td class="price text-right">
+                        <?= currency_format($tip_amount);?>
+                    </td>
+                </tr>
+				<?php }
+				}elseif(session()->has('amttip')){
+					$amtval = Request::session()->get('amttip');
+					$amtval = (float)$amtval;
+				?>
+				<tr>
+                    <td>
+                    <span class="text-muted">
+                        Counter Tip:
+                   </span>
+                    </td>
+                    <td class="text-right">
+					
+					
+                        <?= currency_format($amtval);?>
+                    </td>
+                </tr>
+				<?php } ?>
+                <!-- Tip End -->
                 <tr>
                     <td>
                     <span class="text-muted">
                         <?= lang('igniter.cart::default.text_order_total'); ?>:
                    </span>
                     </td>
-                    <td class="price text-right">
-                        <?= currency_format($cart->total()); ?>
+                    <td class="price text-right"> 
+                    <!-- Tip Condition added -->
+                        <?php if(session()->has('mytip')){ 
+							$cart_totl = ($cart->total() + $tip_amount); ?>
+							<?= currency_format($cart_totl); ?> 
+						<?php } 
+						 else if(session()->has('amttip')){
+							 $cart_totlam = ($cart->total() + $amtval); ?>
+							<?= currency_format($cart_totlam); ?>
+						<?php } 
+						else{ ?>
+							<?= currency_format($cart->total()); ?>	
+						<?php } ?>
                     </td>
                 </tr>
                 </tbody>

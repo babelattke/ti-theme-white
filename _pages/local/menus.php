@@ -14,13 +14,21 @@ layout: local
 '[categories]':
 
 ---
-<?= partial('nav/local_tabs', ['activeTab' => 'menus']); ?>
+
+    <div >
+        <?= partial('nav/local_tabs', ['activeTab' => 'menus']); ?>
+    </div>
+
+    <div class="">
+        <?= partial('nav/control'); ?>
+    </div>
+
 
 <div class="panel">
     <div class="d-block d-sm-none">
-        <div class="panel-body categories">
-            <!-- < ?= partial('categories::default')?> -->
-        </div>
+        <!-- <div class="panel-body categories">
+            < ?= partial('categories::default')?>
+        </div> -->
     </div>  
     <?= component('localMenu') ?>
 </div>

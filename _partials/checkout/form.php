@@ -13,6 +13,10 @@
     <?= partial('@address_fields'); ?>
 <?php } ?>
 
+<div class="my-3">
+    <?= partial('@tips'); ?>
+</div>
+
 <div data-partial="checkoutPayments">
     <?= partial('@payments'); ?>
 </div>

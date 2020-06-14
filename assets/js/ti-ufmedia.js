@@ -472,3 +472,71 @@ while(c.charAt(0)===' ')c=c.substring(1,c.length)
 if(c.indexOf(nameEQ)===0)return c.substring(nameEQ.length,c.length)}
 return null}
 function eraseCookie(name){createCookie(name,"",-1);}})
+
+
+/*  tip-js */
+
+$(document).ready(function(){ 
+	
+	
+		
+    $('.tip_other').click(function(){
+        $('.tip_amount_btn').removeClass('btn-light-border');
+           $(this).addClass('btn-light-border');
+        $('.tip_input').removeClass("hide");
+        $('#order_tip_pc').val("");
+    }); 
+      $('.tip_amount_btn').click(function(){
+           $('.tip_amount_btn').removeClass('btn-light-border');
+           $('.tip_other').removeClass('btn-light-border');
+           $(this).addClass('btn-light-border');
+         $("#tip_any").val("");
+         $('#tip_total_amt').val("");
+          
+         $('.tip_input').addClass("hide");
+         var tip_input =  $(this).val();
+         $('#order_tip_pc').val(tip_input);
+       if(tip_input == 0){
+           var total_amount= $(".table-none tr:first").find("td:last").html();		
+           var totalValue = total_amount.replace('$', '');
+           var percentage_value = percentage($(this).val(), totalValue).toFixed(2);
+           if(percentage_value !== null){
+               $('#tip_total_pc').val(percentage_value);
+           }
+       }
+       else{
+           
+           var total_amount= $(".table-none tr:first").find("td:last").html();		
+           var totalValue = total_amount.replace('$', '');
+           var percentage_value = percentage($(this).val(), totalValue).toFixed(2);
+           if(percentage_value !== null){
+               $('#tip_total_pc').val(percentage_value);
+           }
+       }
+    });
+    
+    
+   
+   $('#tip_any').on('keyup', function() {
+       
+       $('#tip_total_amt').val($(this).val());
+       
+       $('#tip_total_pc').val("");
+       var tip_amt = $(this).val();
+       //var newInputValue = tip_amt.replace(/(\d+)/g,'\'$1\'');
+       $('#tip_amt_btn').val(tip_amt);
+       $('#tip_amt_btn').attr("data-request-data","amtval: " + tip_amt + ", callforamt: 'addtipamt'");
+       $('#tip_amt_btn').trigger( "click" );
+   })
+   
+   /* get percentage*/
+   function percentage(partialValue, totalValue) {
+      return (totalValue * partialValue) / 100 ;
+   }  
+   
+   $('#tip_any').on('input', function() {
+       this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+   });
+   
+   
+});
