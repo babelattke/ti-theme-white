@@ -34,7 +34,7 @@
 
     --main-c:  #F8981D;
     --main-bg: #fcedd2;
-    --main2-c: #ecae5d;
+    --main2-c: #FDC830;
 }
 
 body {
@@ -1490,7 +1490,7 @@ div h5 {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: 25px !important;
+    /* margin-right: 25px !important; */
     margin-left: auto;
     max-width: 95% !important;
 }

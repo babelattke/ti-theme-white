@@ -1,39 +1,37 @@
 <?php if ($paymentGateways) { ?>
     <div class="row pt-3">
         <div class="col-sm-8">
-            <input
-                type="hidden"
-                name="payment"
-                value="">
+            <input type="hidden" name="payment" value=""/>
             <div class="form-group">
-                
+
                 <h5 for=""><i class="fas fa-credit-card mx-2"></i><?= lang('igniter.cart::default.checkout.label_payment_method'); ?></h5><br/>
                 <div class="list-group">
                     <?php foreach ($paymentGateways as $paymentGateway) { ?>
                     <?php
+                        
                         $paymentIsNotApplicable = !$paymentGateway->isApplicable($order->order_total, $paymentGateway);
                     ?>
                         <div
                             class="list-group-item<?= $paymentIsNotApplicable ? ' disabled' : '' ?>"
                             data-checkout-control="choose-payment"
-                            data-payment-code="cash"
+                            data-payment-code="<?= $paymentGateway->code; ?>"
                         >
                             <div
                                 class="custom-control custom-radio"
                             >
                                 <input
                                     type="radio"
-                                    id="payment-cash"
+                                    id="payment-<?= $paymentGateway->code ?>"
                                     class="custom-control-input"
-                                    name="payment"
-                                    
-                                    value="cash"
+                                    name="payment"                                    
+                                    value="<?= $paymentGateway->code ?>"                                        
+                                        <?= $paymentIsNotApplicable ? 'disabled="disabled"' : '' ?>
                                     <?= $paymentIsNotApplicable ? 'disabled="disabled"' : '' ?>
                                     autocomplete="off"
                                 />
                                 <label
                                     class="custom-control-label d-block"
-                                    for="payment-cash"
+                                    for="payment-<?= $paymentGateway->code ?>"
                                 ><?= $paymentGateway->name; ?></label>
                                 <?php if (strlen($paymentGateway->description)) { ?>
                                     <p class="hide small font-weight-normal mb-0">
