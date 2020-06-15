@@ -1,12 +1,7 @@
 <div
-    class="<?= (!$pageIsCart) ? 'd-md-none' : ''; ?>"
-    data-control="cart-box"
-    data-load-item-handler="<?= $loadCartItemEventHandler; ?>"
-    data-update-item-handler="<?= $updateCartItemEventHandler; ?>"
-    data-apply-coupon-handler="<?= $applyCouponEventHandler; ?>"
-    data-change-order-type-handler="<?= $changeOrderTypeEventHandler; ?>"
-    data-remove-item-handler="<?= $removeCartItemEventHandler; ?>"
-    data-remove-condition-handler="<?= $removeConditionEventHandler; ?>"
+    class="<?= (!$pageIsCart) ? '' : ''; ?>"
+    data-control="cart-box"  
+    data-change-order-type-handler="<?= $changeOrderTypeEventHandler; ?>"   
 >
 
 <?php if ($locationCurrent->hasDelivery() OR $locationCurrent->hasCollection()) { ?>
