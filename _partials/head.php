@@ -11,3 +11,6 @@ else { ?>
 <?php if (!empty($this->theme->custom_css)) { ?>
     <?= '<link type="text/css" id="custom-css">'.$this->theme->custom_css.'</link>' ?>
 <?php } ?>
+
+<!-- Save the CSRF token to a meta tag -->
+<meta name="csrf-token" content="<?=csrf_token()?>">

@@ -46,6 +46,10 @@
         {
             "path": "tastyigniter-ufmedia/assets/js/aos.js",
             "name": "aos-js"
+        },
+        {
+            "path": "tastyigniter-ufmedia/assets/js/lang.js",
+            "name": "lang-js"
         }
     ],
     "bundles": [

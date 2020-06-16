@@ -50,9 +50,11 @@ description: 'Local layout'
                     </div> -->
 
                     <div class="col-sm-8">
+                    <div class="d-block d-sm-none">
+                        <?= partial('nav/control'); ?>
+                    </div>
                         <div class="content">
                             <?= component('localBox'); ?>
-
                             <?= page(); ?>
                         </div>
                     </div>

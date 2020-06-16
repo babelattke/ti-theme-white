@@ -87,6 +87,42 @@ $(document).ready(function(){
     
 });
 
+
+
+const switchLanguageRequest = function (lang) {
+    return $.ajax({
+        url: '/changelocale',
+        type: 'POST',
+        data: {
+            '_token': $('meta[name=csrf-token]').attr('content'),
+            'lang': lang,
+        },
+    })
+};
+
+$(function () { // window.onload
+
+    $('#lang-switcher').on('click', function (e) {
+        e.preventDefault();
+
+        const newLang = $(this).text().replace(/\s/g, '');
+
+        // $(this).text(newLang);
+        console.log('new lang', newLang);
+        switchLanguageRequest(newLang)
+        .done(function (response) {
+            console.log(response)
+        })
+        .fail(function () {
+            console.log(...arguments);
+        })
+        .always(function () {
+            window.location.reload();
+        });
+    });
+});
+
+
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');

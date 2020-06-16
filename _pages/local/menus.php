@@ -17,12 +17,7 @@ layout: local
 
     <div >
         <?= partial('nav/local_tabs', ['activeTab' => 'menus']); ?>
-    </div>
-
-    <div class="">
-        <?= partial('nav/control'); ?>
-    </div>
-
+    </div>   
 
 <div class="panel">
     <div class="d-block d-sm-none">

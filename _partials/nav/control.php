@@ -1,6 +1,5 @@
 <div
-    class="<?= (!$pageIsCart) ? '' : ''; ?>"
-    data-control="cart-box"  
+    data-control="cart-box2"  
     data-change-order-type-handler="<?= $changeOrderTypeEventHandler; ?>"   
 >
 
