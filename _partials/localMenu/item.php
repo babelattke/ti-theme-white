@@ -25,9 +25,9 @@ $menuPrice = $specialActive ? $special->getMenuPrice($menuItem->menu_price) : $m
             <div class="menu-item-price">
                 <span><?= $menuPrice > 0 ? currency_format($menuPrice) : lang('main::lang.text_free'); ?></span>
             </div>
-            <div class="menu-item-qty">
+            <!-- <div class="menu-item-qty">
                 <span></span>
-            </div>
+            </div> -->
             <h4><?= e($menuItem->menu_name); ?></h4>
             <p class="text-muted"><?= nl2br($menuItem->menu_description); ?></p>
             <div class="pt-3">

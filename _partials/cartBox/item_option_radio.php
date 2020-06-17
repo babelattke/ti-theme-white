@@ -18,7 +18,9 @@
             for="menuOptionRadio<?= $optionIndex; ?>"
         >
             <?= $optionValue->name; ?>
-            <span class="pull-right"><?= $optionValue->price > 0 ? currency_format($optionValue->price) : lang('main::lang.text_free'); ?></span>
+            <span class="pull-right menu-price"> + 
+                <?= currency_format($optionValue->price); ?>
+            </span>
         </label>
     </div>
 <?php } ?>

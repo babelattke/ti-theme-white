@@ -21,7 +21,7 @@
         >
             <?= $optionValue->name; ?>
             <span class="pull-right menu-price"> + 
-                <?= $optionValue->price > 0 ? currency_format($optionValue->price) : lang('main::lang.text_free'); ?>
+                <?= currency_format($optionValue->price); ?>
             </span>
             
         </label>

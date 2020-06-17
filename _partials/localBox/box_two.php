@@ -9,8 +9,7 @@ $closingTime = Carbon\Carbon::parse($schedule->getCloseTime());
     <?php if ($schedule->isOpen()) { ?>        
         <dt><?= lang('igniter.local::default.text_is_opened'); ?></dt>        
     <?php }
-    else if ($schedule->isOpening()) { ?>
-        <h1>test $isOpening</h1>
+    else if ($schedule->isOpening()) { ?>        
         <dt class="text-muted"><?= sprintf(lang('igniter.local::default.text_opening_time'), $openingTime->isoFormat($openingTimeFormat)); ?></dt>
     <?php }
     else { ?>

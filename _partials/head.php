@@ -14,3 +14,4 @@ else { ?>
 
 <!-- Save the CSRF token to a meta tag -->
 <meta name="csrf-token" content="<?=csrf_token()?>">
+<meta name="app-url" content="<?=config('app.url');?>">

@@ -792,7 +792,7 @@ a.nav-item.nav-link:hover {
 .badge-promo {
     position: relative;
     overflow: hidden;
-    max-height: 60px;
+    /*max-height: 60px;*/
     margin-bottom: -8px;
     z-index: 1;
     padding: 12px 14px;
@@ -980,6 +980,11 @@ div a.add-comment {
 
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    border-color: $primary;
+    background-color:   $primary;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before{
     border-color: $primary;
     background-color:   $primary;
 }

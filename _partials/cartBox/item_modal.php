@@ -51,10 +51,8 @@
         </div>
         </div>
 
-        <div class="pt-3">
-          <a class="add-comment" href="#" onclick="toggle_visibility('addComment');"><?= lang('igniter.cart::default.label_add_comment'); ?></a>
-        </div>
-        <div class="menu-comment" id="addComment">        
+        
+        <div class="menu-comment">        
           <textarea            
             name="comment"
             class="form-control"            
@@ -126,6 +124,32 @@
     } else {
       current_total -= item_value;
     }
+    
+    $total.html("$" + current_total.toFixed(2));
+});
+
+$(".modal-body").on("click", "input:radio", function () {
+    var $this = $(this);
+    var $total = $("#price");
+    var $target = $("label[for='" + $this.attr("id") + "']");
+    var $current = 0.00;
+
+    var item_value = +($target.html().replace(/[^\d\.]/g, '') || 0.00);
+    var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
+
+    if (item_value > $current){
+      console.log("greater");
+      current_total += item_value; 
+      $current = item_value;
+      console.log("Current: " + $current);
+    } else if (item_value < $current){
+      console.log("less than");
+      current_total -= item_value; 
+      $current = item_value;
+    } else if (item_value == $current) {
+      console.log("nothing");      
+    }
+
     
     $total.html("$" + current_total.toFixed(2));
 });

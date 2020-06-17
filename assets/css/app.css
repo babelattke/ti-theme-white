@@ -9329,7 +9329,7 @@ body > main {
     margin-right: -1rem;
     padding: 1.25rem 1rem 10px;
     border-top: 1px solid #efeded;
-    display: none;
+    /* display: none; */
 }
 
 .payments .list-group-item {

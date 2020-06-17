@@ -24,7 +24,7 @@
         <div class="option option-<?= $menuOption->display_type; ?>">
             <div class="option-details">                
                 <?php if ($menuOption->min_selected > 0 OR $menuOption->max_selected > 0) { ?>
-                    <p class="mb-0"><?= sprintf(lang('igniter.cart::default.text_option_summary'), $menuOption->min_selected, $menuOption->max_selected); ?></p>
+                    <p class="mb-0 ml-4"><?= sprintf(lang('igniter.cart::default.text_option_summary'), $menuOption->min_selected, $menuOption->max_selected); ?></p>
                 <?php } ?>
             </div>
 
