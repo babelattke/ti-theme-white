@@ -1,5 +1,5 @@
 <div
-  class="modal-dialog "
+  class="modal-dialog"
   data-control="cart-item"
   data-min-quantity="<?= $menuItem->minimum_qty; ?>" 
   data-price-amount="<?= $cartItem ? $cartItem->price : $menuItem->getBuyablePrice() ?>"
@@ -127,27 +127,27 @@
     
     $total.html("$" + current_total.toFixed(2));
 });
-
+var $last = 0.00;
 $(".modal-body").on("click", "input:radio", function () {
     var $this = $(this);
     var $total = $("#price");
     var $target = $("label[for='" + $this.attr("id") + "']");
     var $current = 0.00;
+    
 
     var item_value = +($target.html().replace(/[^\d\.]/g, '') || 0.00);
     var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
 
-    if (item_value > $current){
-      console.log("greater");
-      current_total += item_value; 
-      $current = item_value;
-      console.log("Current: " + $current);
-    } else if (item_value < $current){
-      console.log("less than");
-      current_total -= item_value; 
-      $current = item_value;
-    } else if (item_value == $current) {
-      console.log("nothing");      
+    if (item_value == 0.00){
+      current_total -= $last;  
+      $last = item_value;
+    } else if (item_value != 0 &&  item_value == $last){
+    } else if (item_value != 0 && item_value != $last){
+      current_total -= $last;     
+      current_total += item_value;
+      $last = item_value;
+    } else {
+      console.log("something weird");
     }
 
     

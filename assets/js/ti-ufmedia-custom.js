@@ -84,6 +84,16 @@ $(document).ready(function(){
     $(".submit").click(function(){
     return false;
     })
+
+    $(document).on('click', '#deliverymain', function(event) { 
+        event.preventDefault(); 
+        $("#deliverycart").trigger("click");
+    });
+
+    $(document).on('click', '#pickupmain', function(event) { 
+        event.preventDefault(); 
+        $("#pickupcart").trigger("click");
+    });
     
 });
 

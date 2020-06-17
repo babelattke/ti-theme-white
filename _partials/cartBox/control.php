@@ -9,6 +9,7 @@
         <label
             class="btn <?= $location->orderTypeIsDelivery() ? 'active' : ''; ?>">
             <input 
+                id="deliverycart"
                 type="radio" 
                 name="radio" 
                 data-cart-toggle="order-type"
@@ -33,6 +34,7 @@
         <label
             class="btn <?= ($location->orderType() == 'collection') ? 'active' : ''; ?>">
             <input 
+                id="pickupcart"
                 type="radio" 
                 name="radio"
                 data-cart-toggle="order-type"

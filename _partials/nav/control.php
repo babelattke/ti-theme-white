@@ -1,6 +1,5 @@
 <div
-    data-control="cart-box2"  
-    data-change-order-type-handler="<?= $changeOrderTypeEventHandler; ?>"   
+    data-change-order-type-handler="<?= $changeOrderTypeEventHandler; ?>"
 >
 
 <?php if ($locationCurrent->hasDelivery() OR $locationCurrent->hasCollection()) { ?>
@@ -14,6 +13,7 @@
         <label
             class="btn <?= $location->orderTypeIsDelivery() ? 'active' : ''; ?>">
             <input 
+                id="deliverymain"
                 type="radio" 
                 name="radio2" 
                 data-cart-toggle="order-type"
@@ -38,6 +38,7 @@
         <label
             class="btn <?= ($location->orderType() == 'collection') ? 'active' : ''; ?>">
             <input 
+                id="pickupmain"
                 type="radio" 
                 name="radio2"
                 data-cart-toggle="order-type"
@@ -61,3 +62,7 @@
     </div> 
 <?php } ?>
 </div>
+
+<script>
+    
+</script>

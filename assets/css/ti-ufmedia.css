@@ -617,7 +617,7 @@ a.nav-item.nav-link:hover {
 
 .badge-promo:after {
   background: #F8981D;
-  transform: rotate(-3deg);
+  /* transform: rotate(-3deg); */
   transform-origin: bottom left;
   height: 100%;
   width: 110%; }

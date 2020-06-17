@@ -814,8 +814,7 @@ a.nav-item.nav-link:hover {
     transform: rotate(1deg);
 }
 .badge-promo:after {
-    background: $primary;
-    transform: rotate(-3deg);
+    background: $primary;    
     transform-origin: bottom left;
     height: 100%;
     width: 110%;
