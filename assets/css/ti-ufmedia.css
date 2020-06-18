@@ -298,7 +298,19 @@ h6, .h6 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300 !important; }
 
+.lang-button {
+  font-family: 'Quicksand', sans-serif;
+  border: 1px solid #F8981D;
+  color: #333333;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0.5rem; }
 
+.lang-button:hover {
+  text-decoration: none;
+  color: #333333; }
 
 /* Footer */
 .footer {
@@ -594,7 +606,7 @@ a.nav-item.nav-link:hover {
 .badge-promo {
   position: relative;
   overflow: hidden;
-  /* max-height: 60px; */
+  /*max-height: 60px;*/
   margin-bottom: -8px;
   z-index: 1;
   padding: 12px 14px;
@@ -617,7 +629,6 @@ a.nav-item.nav-link:hover {
 
 .badge-promo:after {
   background: #F8981D;
-  /* transform: rotate(-3deg); */
   transform-origin: bottom left;
   height: 100%;
   width: 110%; }
@@ -769,6 +780,10 @@ div a.add-comment {
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #F8981D;
   background-color: #F8981D; }
+
+.cart-total .table-responsive {
+  box-shadow: none;
+}
 
 /* CartBox End */
 /* Checkout Start */
@@ -1059,6 +1074,13 @@ div h5 {
   .sign-in-container, .sign-up-container {
     width: 100%;
     justify-content: center; } }
+
+@media only screen and (max-width: 400px) {
+  .tip {
+    height: 3rem;
+    width: 3rem; }
+  button.tip {
+    font-size: 0.7rem; } }
 
 /* Login Page Custom CSS END */
 /* MyAccount Start */
@@ -2453,8 +2475,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary, .swal-button--confirm {
   color: #fff;
-  background-color: #3F4954;
-  border-color: #3F4954; }
+  background-color: #F8981D !important;
+  border-color: #F8981D !important; }
 
 .btn-primary:hover, .swal-button--confirm:hover {
   color: #fff;
@@ -3151,7 +3173,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #3F4954; }
+  background-color: #F8981D !important; }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6D6461;
@@ -3798,7 +3820,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 /*  */
 .navbar-top {
-  background-color: #fff; }
+  background-color: #FFFFFF; }
 
 .navbar-top .navbar-brand .img-logo {
   height: 40px; }
@@ -4028,7 +4050,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   color: rgba(0, 0, 0, 0.9); }
 
 .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav navbar > li > a, .nav .navbar-light .navbar-nav navbar > li > a {
-  color: #3F4954 !important; }
+  color: #333333 !important; }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav navbar > li > a:hover, .nav .navbar-light .navbar-nav navbar > li > a:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav navbar > li > a:focus, .nav .navbar-light .navbar-nav navbar > li > a:focus {
   color: rgba(0, 0, 0, 0.7); }

@@ -16,7 +16,7 @@
                 </tr>
                 <!-- Tip -->
                 <?php
-					function tipamount($tip_perc, $subtotal){ return (( $tip_perc / 100 ) * $subtotal);}
+					function tipamounts($tip_perc, $subtotal){ return (( $tip_perc / 100 ) * $subtotal);}
 				?>
                 <!-- Tip end -->
                 <?php foreach ($cart->conditions() as $id => $condition) { ?>
@@ -44,7 +44,7 @@
                 <?php } ?>
                 <!-- Tip Start -->
                 <?php if(session()->has('mytip')){ 
-						$tip_amount = tipamount(Request::session()->get('mytip'),$cart->subtotal());
+						$tip_amount = tipamounts(Request::session()->get('mytip'),$cart->subtotal());
 						if((Request::session()->get('mytip')) !=0 ){		
 				?>
 				<tr>

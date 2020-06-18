@@ -39,6 +39,7 @@
     class="<?= (!$pageIsCheckout ? 'fixed-bottom' : 'mt-3').($pageIsCart ? 'hide' : ' d-block d-sm-none'); ?>"
 >
     <?php if ($pageIsCheckout) { ?>
+        
         <?= partial('@buttons'); ?>
     <?php } else if (!$pageIsCart) { ?>
         <a

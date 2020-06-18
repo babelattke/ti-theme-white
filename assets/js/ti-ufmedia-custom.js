@@ -94,14 +94,20 @@ $(document).ready(function(){
         event.preventDefault(); 
         $("#pickupcart").trigger("click");
     });
+
+    //Update Price in Checkout based on total in cartbox  
+    $("#mainTotal").on('DOMSubtreeModified', function () {
+        console.log("changed");
+    });
     
 });
 
 
 
+
 const switchLanguageRequest = function (lang) {
     return $.ajax({
-        url: '/order/changelocale',
+        url: '/changelocale',
         type: 'POST',
         data: {
             '_token': $('meta[name=csrf-token]').attr('content'),

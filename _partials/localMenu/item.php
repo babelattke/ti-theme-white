@@ -34,7 +34,7 @@ $menuPrice = $specialActive ? $special->getMenuPrice($menuItem->menu_price) : $m
             <button
                     class="add-item-cart<?= $mealtimeNotAvailable ? ' disabled' : '' ?>"
                     <?php if (!$mealtimeNotAvailable) { ?>
-                        <?php if ($menuHasOptions) { ?>
+                        <?php if ($menuHasOptions | !$menuHasOptions) { ?>
                             data-cart-control="load-item"
                             data-menu-id="<?= $menuItem->menu_id; ?>"
                             data-quantity="<?= $menuItem->minimum_qty; ?>"

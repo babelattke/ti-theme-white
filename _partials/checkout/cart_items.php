@@ -1,11 +1,8 @@
 <h5>
-    <i class="fas fa-shopping-cart"></i> Your Items 
-    <span class="pull-right quantity text-muted"><?= currency_format($cart->total()); ?></span>
-</h5>
-
-
+    <i class="fas fa-shopping-cart"></i> <?= lang('igniter.cart::default.text_checkout_your_items'); ?> 
+</h5>   
 <?php if ($cart->count()) { ?>
-    <div class="list-group cart-items col ml-2 mb-2 text-center">
+    <div class="list-group cart-items col ml-1 mb-2 text-center">
         <ul>
             <?php foreach ($cart->content()->reverse() as $cartItem) { ?>
                 <li class="checkout-cart-items">                                    
@@ -41,4 +38,13 @@
 <?php }
 else { ?>
     <div class="panel-body"><?= lang('igniter.cart::default.text_no_cart_items'); ?></div>
+<?php } ?>
+
+<?php if ($pageIsCheckout) { ?>
+    <div id="checkout-totals"  
+        class="
+            <?= (!$pageIsCheckout ? 'fixed-bottom' : 'mt-3').($pageIsCart ? 'hide' : ' d-block d-sm-none'); ?>
+        ">
+        <?= partial('@cart_total')?>     
+    </div>         
 <?php } ?>

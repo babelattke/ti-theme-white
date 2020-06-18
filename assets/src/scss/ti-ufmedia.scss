@@ -457,6 +457,22 @@ h6,
     font-family: $font-family-poppins;    
     font-weight: 300 !important;
 }
+
+.lang-button {
+    font-family: $font-family-poppins;
+    border: 1px solid $primary;
+    color: $body-color;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: .5rem;
+    margin: .5rem;
+  }
+  
+.lang-button:hover {
+text-decoration: none;
+color: $body-color;
+}
     /* Footer */
 
 .footer {
@@ -987,6 +1003,10 @@ div a.add-comment {
     border-color: $primary;
     background-color:   $primary;
 }
+
+.cart-total .table-responsive {
+    box-shadow: none;
+}
     
     /* CartBox End */
 
@@ -1346,6 +1366,17 @@ div h5 {
       
     
 }
+
+@media only screen and (max-width: 400px){
+    .tip {
+      height: 3rem;
+      width: 3rem;
+    }
+  
+    button.tip {
+      font-size: .7rem;
+    }
+  }
 
 
 
@@ -3400,8 +3431,8 @@ fieldset:disabled a.btn {
 .btn-primary,
 .swal-button--confirm {
     color: #fff;
-    background-color: $textgray ;
-    border-color: $textgray
+    background-color: $primary !important;
+    border-color: $primary !important;
 }
 
 .btn-primary:hover,
@@ -4419,7 +4450,7 @@ input[type=number]::-webkit-outer-spin-button {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: $textgray
+    background-color: $primary!important;
 }
 
 .dropdown-item.disabled,
@@ -5370,11 +5401,11 @@ input[type=number]::-webkit-outer-spin-button {
 /*  */
 
 .navbar-top {
-    background-color: #fff
+    background-color: $navbar-top-bg
 }
 
 .navbar-top .navbar-brand .img-logo {
-    height: 40px
+    height: $logo-height;
 }
 
 .navbar-top .navbar-brand .text-logo {
@@ -5708,7 +5739,7 @@ input[type=number]::-webkit-outer-spin-button {
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-nav .nav navbar > li > a,
 .nav .navbar-light .navbar-nav navbar > li > a {
-    color: $textgray !important
+    color: $body-color !important
 }
 
 .navbar-light .navbar-nav .nav-link:hover,

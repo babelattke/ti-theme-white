@@ -12,16 +12,36 @@
 		<input type="hidden" id="tip_total_pc" name="tip_percentage">
 		<input type="hidden" id="tip_total_amt" name="tip_amount">
 		<div class="col text-center">
-			<button type="button" class="tip tip_amount_btn btnclick" data-request="cartBox::onUpdateCart" data-request-data="perval: '0', callfor: 'addtip'" id="tip_0" value="0" <?php if(session()->has('mytip') == 0){ echo 'btn-light-border';} ?> >0%</button>
+			<button type="button" class="tip tip_amount_btn btnclick" 
+				data-request="cartBox::onUpdateCart" 
+				data-request-data="perval: '0', callfor: 'addtip'" 
+				id="tip_0" value="0" 
+				<?php if(session()->has('mytip') == 0){ echo 'btn-light-border';} ?> >0%
+			</button>
 		</div>
 		<div class="col text-center">
-			<button type="button" class="tip tip_amount_btn btnclick <?php if(Request::session()->get('mytip') == 15){ echo 'btn-light-border';} else{echo "";} ?>" data-request="cartBox::onUpdateCart" data-request-data="perval: '15', callfor: 'addtip'" id="tip_15" value="15">15%</button>
+			<button type="button" class="tip tip_amount_btn btnclick 
+				<?php if(Request::session()->get('mytip') == 15){ echo 'btn-light-border';} else{echo "";} ?>" 
+				data-request="cartBox::onUpdateCart" 
+				data-request-data="perval: '15', callfor: 'addtip'" 
+				id="tip_15" value="15">15%
+			</button>
 		</div>
 		<div class="col text-center">
-			<button type="button" class="tip tip_amount_btn btnclick <?php if(Request::session()->get('mytip') == 18){ echo 'btn-light-border';} else{echo "";} ?>" data-request="cartBox::onUpdateCart" data-request-data="perval: '18', callfor: 'addtip'" id="tip_18" value="18">18%</button>
+			<button type="button" class="tip tip_amount_btn btnclick 
+				<?php if(Request::session()->get('mytip') == 18){ echo 'btn-light-border';} else{echo "";} ?>" 
+				data-request="cartBox::onUpdateCart" 
+				data-request-data="perval: '18', callfor: 'addtip'" 
+				id="tip_18" value="18">18%
+			</button>
 		</div> 
 		<div class="col text-center">
-			<button type="button" class="tip tip_amount_btn btnclick <?php if(Request::session()->get('mytip') == 20){ echo 'btn-light-border';} else{echo "";} ?>" data-request="cartBox::onUpdateCart" data-request-data="perval: '20', callfor: 'addtip'" id="tip_20" value="20">20%</button>
+			<button type="button" class="tip tip_amount_btn btnclick 
+				<?php if(Request::session()->get('mytip') == 20){ echo 'btn-light-border';} else{echo "";} ?>" 
+				data-request="cartBox::onUpdateCart" 
+				data-request-data="perval: '20', callfor: 'addtip'" 
+				id="tip_20" value="20">20%
+			</button>
 		</div>
 		<div class="col text-center">
 			<button type="button" class="tip tip_other <?php if(session()->has('amttip')){ echo 'btn-light-border';} else{echo "";} ?>" ><?= lang('igniter.cart::default.checkout.tip_amount_other'); ?></button>

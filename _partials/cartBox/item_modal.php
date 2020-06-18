@@ -116,7 +116,7 @@
     var $total = $("#price");
     var $target = $("label[for='" + $this.attr("id") + "']");
     
-    var item_value = +($target.html().replace(/[^\d\.]/g, '') || 0.00);
+    var item_value = +($target.html().split('$').pop().replace(/[^\d\.]/g, '') || 0.00);
     var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
 
     if ($this.prop("checked") === true) {
@@ -134,8 +134,9 @@ $(".modal-body").on("click", "input:radio", function () {
     var $target = $("label[for='" + $this.attr("id") + "']");
     var $current = 0.00;
     
-
-    var item_value = +($target.html().replace(/[^\d\.]/g, '') || 0.00);
+    
+    
+    var item_value = +($target.html().split('$').pop().replace(/[^\d\.]/g, '') || 0.00); 
     var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
 
     if (item_value == 0.00){
