@@ -1,5 +1,5 @@
 <div
-    class="<?= (!$pageIsCart) ? 'affix-cart d-none d-sm-block' : ''; ?>"
+    class="<?= (!$pageIsCart) ? ' d-none d-sm-block' : ''; ?>"
     data-control="cart-box"
     data-load-item-handler="<?= $loadCartItemEventHandler; ?>"
     data-update-item-handler="<?= $updateCartItemEventHandler; ?>"
@@ -7,6 +7,7 @@
     data-change-order-type-handler="<?= $changeOrderTypeEventHandler; ?>"
     data-remove-item-handler="<?= $removeCartItemEventHandler; ?>"
     data-remove-condition-handler="<?= $removeConditionEventHandler; ?>"
+    id="cart-sticky"
 >
     <div id="cart-box" class="module-box">
         <div class="panel panel-cart">

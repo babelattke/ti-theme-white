@@ -686,6 +686,13 @@ div a.add-comment {
 /* ITEM MODAL END */
 /* localMenu End */
 /* CartBox Start */
+
+#cart-sticky{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
 .middle {
   width: 100%;
   text-align: center; }
@@ -713,8 +720,8 @@ div a.add-comment {
   opacity: 1; }
 
 .middle .box {
-  width: 150px;
-  height: 100px;
+  width: 9.5rem;
+  height: 5.5rem;
   background-color: #fff;
   transition: all 250ms ease;
   will-change: transition;
@@ -783,6 +790,23 @@ div a.add-comment {
 
 .cart-total .table-responsive {
   box-shadow: none;
+}
+
+@media only screen and (max-width: 768px) { 
+.middle .box {
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 12px;
+}
+
+.container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.card-body, .well, .thumbnail, .panel-body {
+  padding: 1rem !important;; }
+  
 }
 
 /* CartBox End */

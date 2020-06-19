@@ -13,8 +13,11 @@
         <div
             class="alert alert-<?= $message['level']; ?><?= $message['important'] ? ' alert-important' : ''; ?>"
             data-control="flash-message"
-            data-allow-dismiss="<?= $message['important'] ? 'false' : 'true'; ?>"
+            data-allow-dismiss="true"
             role="alert"
         ><?= $message['message']; ?></div>
     <?php } ?>
 <?php } ?>
+
+<!-- Original data-allow-dismss -->
+<!-- < ?= $message['important'] ? 'false' : 'true'; ?> -->

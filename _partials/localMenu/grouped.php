@@ -18,7 +18,7 @@
                     ?>
                     <div id="<?= $menuCategoryAlias; ?>-heading" role="tab">
                         <h4
-                            class="category-title cursor-pointer"
+                            class="category-title cursor-pointer collapsed"
                             data-toggle="collapse"
                             data-target="#<?= $menuCategoryAlias; ?>-collapse"
                             aria-expanded="false"
@@ -27,7 +27,7 @@
                     </div>
                     <div
                         id="<?= $menuCategoryAlias; ?>-collapse"
-                        class="collapse <?= $index < 5 ? 'show' : ''; ?>"
+                        class="collapse <?= $index < 0 ? 'show' : ''; ?>"
                         role="tabpanel" aria-labelledby="<?= $menuCategoryAlias; ?>"
                     >
                         <div class="menu-category">
