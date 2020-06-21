@@ -96,8 +96,8 @@ $(document).ready(function(){
     });
 
     //Update Price in Checkout based on total in cartbox  
-    $("#mainTotal").on('DOMSubtreeModified', function () {
-        console.log("changed");
+    $(".alert").delay(4000).slideUp(200, function() {        
+        $(this).alert('close');
     });
     
 });

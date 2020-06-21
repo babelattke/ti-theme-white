@@ -214,10 +214,10 @@ $indicatorContainer.progressIndicator(options)}).on('ajaxFail ajaxDone','[data-p
 var FlashMessage=function(options,el){var options=$.extend({},FlashMessage.DEFAULTS,options),$element=$(el)
 $('body > p.flash-message').remove()
 if($element.length===0){$element=$('<div />',{class:'alert alert-'+options.class}).html(options.text)}
-$element.addClass('flash-message animated fadeInDown')
+$element.addClass('flash-message animated fadeInDown alert-dismissible')
 $element.attr('data-control',null)
 if(options.allowDismiss)
-$element.append('<button type="button" class="close" aria-hidden="true">&times;</button>')
+$element.append('<button type="button" class="close" aria-hidden="true" data-dismiss="alert">&times;</button>')
 $element.on('click','button',remove)
 if(options.interval>0)$element.on('click',remove)
 $(options.container).prepend($element)
