@@ -29,10 +29,10 @@ layout: default
             <form>
                 <h1>Create Account</h1>                
                 <span>or use your email for registration</span>
-                <div class="social-container">
+                <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google"></i></a>
-                </div>
+                </div> -->
                 <input
                     type="text"
                     id="first-name"                    
@@ -94,10 +94,10 @@ layout: default
             ); ?>
             <form>
                 <h1>Sign in</h1>
-                <div class="social-container">
+                <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google"></i></a>
-                </div>
+                </div> -->
                 <span>or use your account</span>
                 <input id="login-email" name="email" type="email" placeholder="Email" />
                 <input id="login-password" name="password" type="password" placeholder="Password" />

@@ -1,6 +1,9 @@
 <?php
 $orderDateTime = $location->orderDateTime();
 $orderTimeIsAsap = $location->orderTimeIsAsap();
+//New ones
+$schedule = $location->workingSchedule($location->orderType());
+$openingTime = Carbon\Carbon::parse($schedule->getOpenTime());
 ?>
 <div
     class="dropdown"
@@ -16,23 +19,34 @@ $orderTimeIsAsap = $location->orderTimeIsAsap();
     >
         <i class="fa fa-clock-o"></i>&nbsp;&nbsp;
         <b><?=
-            ($orderTimeIsAsap)
+            ($schedule->isOpen())
                 ? lang('igniter.local::default.text_asap')
                 : $orderDateTime->isoFormat($timePickerDateTimeFormat);
             ?></b>
     </button>
 
     <div class="dropdown-menu" aria-labelledby="orderTimePicker">
+    <?php if ($schedule->isOpen()) { ?>        
         <button
             type="button"
             class="dropdown-item py-2"
             data-timepicker-option="asap"
-        ><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?= lang('igniter.local::default.text_asap'); ?></button>
+        ><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?= lang('igniter.local::default.text_asap'); ?></button>   
         <button
             type="button"
             class="dropdown-item py-2"
             data-timepicker-option="later"
+        ><i class="fa fa-calendar"></i>&nbsp;&nbsp;<?= lang('igniter.local::default.text_later'); ?></button>   
+    <?php }
+    else { ?>        
+         <button
+            type="button"
+            class="dropdown-item py-2"
+            data-timepicker-option="later"
         ><i class="fa fa-calendar"></i>&nbsp;&nbsp;<?= lang('igniter.local::default.text_later'); ?></button>
+    <?php } ?>
+        
+       
 
         <form
             class="dropdown-content px-4 py-3 hide"

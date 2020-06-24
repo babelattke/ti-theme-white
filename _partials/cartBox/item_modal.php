@@ -70,7 +70,7 @@
                 <button
                   class="btn btn-light btn-minus"
                   data-operator="minus"
-                  type="button"
+                  type="button"                                    
                 ><i class="fas fa-minus"></i></button>
               </div>
               <input
@@ -111,6 +111,7 @@
 
 
 <script>
+
   $(".modal-body").on("click", "input:checkbox", function () {
     var $this = $(this);
     var $total = $("#price");
@@ -127,7 +128,11 @@
     
     $total.html("$" + current_total.toFixed(2));
 });
+
 var $last = 0.00;
+var $total = $("#price");
+var item_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
+
 $(".modal-body").on("click", "input:radio", function () {
     var $this = $(this);
     var $total = $("#price");
@@ -154,4 +159,19 @@ $(".modal-body").on("click", "input:radio", function () {
     
     $total.html("$" + current_total.toFixed(2));
 });
+
+$(".btn-plus").on("click",  function () {
+  var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
+  current_total += item_total;
+  $total.html("$" + current_total.toFixed(2));
+});
+//Disable btn-minus if value = 1
+$(".btn-minus").on("click",  function () {
+  var current_total = +($total.html().replace(/[^\d\.]/g, '') || 0.00);
+  if(current_total > item_total){
+    current_total -= item_total;
+  }  
+  $total.html("$" + current_total.toFixed(2));
+});
+
 </script>

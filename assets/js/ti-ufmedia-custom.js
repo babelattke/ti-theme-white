@@ -105,9 +105,10 @@ $(document).ready(function(){
 
 
 
+
 const switchLanguageRequest = function (lang) {
     return $.ajax({
-        url: '/changelocale',
+        url: '/order/changelocale',
         type: 'POST',
         data: {
             '_token': $('meta[name=csrf-token]').attr('content'),
