@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200;400&family=Lexend+Deca&family=Livvic:wght@200;400&family=Poppins:wght@200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200;400&family=Lexend+Deca&family=Livvic:wght@200;400&family=Poppins:wght@200;300;400&Quicksand:wght@300;400&display=swap');
 :root {
   /* Theme font-family */
@@ -34,7 +33,7 @@
 
 body {
   margin: 0;
-  font-family: "Lexend Deca", Arial, sans-serif;
+  font-family: "Lexend Deca", cursive;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -110,7 +109,7 @@ a {
   background-color: transparent; }
 
 a:hover {
-  color: #F8981D;
+  color: #28A5DF;
   text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -300,7 +299,7 @@ h6, .h6 {
 
 .lang-button {
   font-family: 'Quicksand', sans-serif;
-  border: 1px solid #F8981D;
+  border: 1px solid #28A5DF;
   color: #333333;
   font-size: 1rem;
   border-radius: 5px;
@@ -318,7 +317,7 @@ h6, .h6 {
   bottom: 0;
   width: 100%;
   color: rgba(255, 255, 255, 0.75);
-  background-color: #F8981D; }
+  background-color: #28A5DF; }
 
 .footer a {
   color: rgba(255, 255, 255, 0.75); }
@@ -427,13 +426,13 @@ a.nav-item.nav-link.active {
   background-color: transparent;
   border-radius: 0;
   border: none;
-  color: #F8981D;
+  color: #28A5DF;
   font-weight: 400;
   padding: 0.2rem 1.3rem;
   margin: auto 0; }
 
 a.nav-item.nav-link:hover {
-  color: #2b3e50; }
+  color: #64544D; }
 
 .menu-item-card {
   background-color: #fff;
@@ -510,7 +509,7 @@ a.nav-item.nav-link:hover {
   width: 100%; }
 
 .menu-item-price span {
-  font-family: "Lexend Deca", Arial, sans-serif;
+  font-family: "Lexend Deca", cursive;
   position: absolute;
   bottom: 10px;
   left: 20px;
@@ -519,10 +518,10 @@ a.nav-item.nav-link:hover {
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .menu-item-qty span {
-  font-family: "Lexend Deca", Arial, sans-serif;
+  font-family: "Lexend Deca", cursive;
   position: absolute;
   bottom: 10px;
   right: 60px;
@@ -531,10 +530,10 @@ a.nav-item.nav-link:hover {
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .add-item-cart {
-  background-color: #F8981D;
+  background-color: #28A5DF;
   border: 0;
   border-radius: 50%;
   color: #fff;
@@ -560,13 +559,13 @@ a.nav-item.nav-link:hover {
   box-shadow: none !important; }
 
 .menu-price {
-  font-family: "Lexend Deca", Arial, sans-serif;
+  font-family: "Lexend Deca", cursive;
   font-weight: 400;
   font-size: 1rem;
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .menu-option .option-details, .order-type label {
-  font-family: "Lexend Deca", Arial, sans-serif;
+  font-family: "Lexend Deca", cursive;
   background-color: #fff !important;
   /* text-transform: uppercase; */
   font-weight: 200 !important;
@@ -575,28 +574,28 @@ a.nav-item.nav-link:hover {
   padding: 0 !important; }
 
 .btn-add-item {
-  background: #F8981D !important;
+  background: #28A5DF !important;
   color: #fff !important; }
 
 .btn-add-item:hover {
-  background: #F8981D !important; }
+  background: #28A5DF !important; }
 
 .btn-minus {
-  background: #F8981D !important;
+  background: #28A5DF !important;
   color: #fff !important;
   border-radius: 50px !important;
   /* border-top-left-radius: 30px !important;
    border-bottom-left-radius: 30px !important; */ }
 
 .item-qty {
-  color: #F8981D !important;
+  color: #28A5DF !important;
   background: #fff !important;
   -webkit-appearance: none !important;
   margin: 0 !important;
   border: none !important; }
 
 .btn-plus {
-  background: #F8981D !important;
+  background: #28A5DF !important;
   color: #fff !important;
   border-radius: 50px !important;
   /* border-top-left-radius: 30px !important;
@@ -621,14 +620,14 @@ a.nav-item.nav-link:hover {
   left: 0; }
 
 .badge-promo:before {
-  background: #2b3e50;
+  background: #64544D;
   height: 100%;
   width: 110%;
   transform-origin: bottom right;
   transform: rotate(1deg); }
 
 .badge-promo:after {
-  background: #F8981D;
+  background: #28A5DF;
   transform-origin: bottom left;
   height: 100%;
   width: 110%; }
@@ -636,11 +635,11 @@ a.nav-item.nav-link:hover {
 .badge-promo-content {
   position: relative;
   z-index: 1;
-  font-family: "Lexend Deca", Arial, sans-serif;
+  font-family: "Lexend Deca", cursive;
   font-size: 1.3rem; }
 
 div a.add-comment {
-  color: #F8981D; }
+  color: #28A5DF; }
 
 /* TEST START */
 #accordionOptions h5 a {
@@ -686,12 +685,11 @@ div a.add-comment {
 /* ITEM MODAL END */
 /* localMenu End */
 /* CartBox Start */
-
-#cart-sticky{
-  position: -webkit-sticky; /* Safari */
+#cart-sticky {
+  position: -webkit-sticky;
+  /* Safari */
   position: sticky;
-  top: 0;
-}
+  top: 0; }
 
 .middle {
   width: 100%;
@@ -709,7 +707,7 @@ div a.add-comment {
   display: none; }
 
 .middle input[type="radio"]:checked + .box {
-  background-color: #F8981D; }
+  background-color: #28A5DF; }
 
 .middle input[type="radio"]:checked + .box span {
   color: white;
@@ -720,8 +718,8 @@ div a.add-comment {
   opacity: 1; }
 
 .middle .box {
-  width: 9.5rem;
-  height: 5.5rem;
+  width: 150px;
+  height: 100px;
   background-color: #fff;
   transition: all 250ms ease;
   will-change: transition;
@@ -745,7 +743,7 @@ div a.add-comment {
   font-size: 1.3em;
   user-select: none;
   text-transform: uppercase;
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .middle .box h5 {
   position: absolute;
@@ -777,37 +775,30 @@ div a.add-comment {
   font-weight: 900; }
 
 .price {
-  font-family: "Lexend Deca", Arial, sans-serif;
-  color: #F8981D; }
+  font-family: "Lexend Deca", cursive;
+  color: #28A5DF; }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #F8981D;
-  background-color: #F8981D; }
+  border-color: #28A5DF;
+  background-color: #28A5DF; }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #F8981D;
-  background-color: #F8981D; }
+  border-color: #28A5DF;
+  background-color: #28A5DF; }
 
 .cart-total .table-responsive {
-  box-shadow: none;
-}
+  box-shadow: none; }
 
-@media only screen and (max-width: 768px) { 
-.middle .box {
-    width: 5.5rem;
-    height: 5.5rem;
-    font-size: 12px;
-}
-
-.container {
+@media only screen and (max-width: 768px) {
+  .middle .box {
+    width: 5.9rem;
+    height: 5rem;
+    font-size: 12px; }
+  .container {
     padding-left: 0px !important;
-    padding-right: 0px !important;
-}
-
-.card-body, .well, .thumbnail, .panel-body {
-  padding: 1rem !important;; }
-  
-}
+    padding-right: 0px !important; }
+  .card-body, .well, .thumbnail, .panel-body {
+    padding: 0.7rem !important; } }
 
 /* CartBox End */
 /* Checkout Start */
@@ -844,7 +835,7 @@ div h5 {
   border-bottom: none !important; }
 
 .checkout-cart-items .quantity {
-  background-color: #F8981D;
+  background-color: #28A5DF;
   color: white;
   border-radius: 50%;
   margin: 0 4px;
@@ -861,7 +852,7 @@ div h5 {
 .tip {
   display: inline-block;
   text-decoration: none;
-  background: #F8981D;
+  background: #28A5DF;
   color: #FFF;
   width: 55px;
   height: 55px;
@@ -870,7 +861,7 @@ div h5 {
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
-  box-shadow: 0px 0px 0px 5px #F8981D;
+  box-shadow: 0px 0px 0px 5px #28A5DF;
   border: dashed 1px #FFF;
   transition: 0.4s; }
 
@@ -917,8 +908,8 @@ div h5 {
 
 #login button {
   border-radius: 20px;
-  border: 1px solid #F8981D;
-  background-color: #F8981D;
+  border: 1px solid #28A5DF;
+  background-color: #28A5DF;
   color: #FFFFFF;
   font-size: 12px;
   font-weight: bold;
@@ -1020,8 +1011,8 @@ div h5 {
 
 .overlay {
   background: #FF416C;
-  background: -webkit-linear-gradient(to right, #F8981D, #FDC830);
-  background: linear-gradient(to right, #FDC830, #F8981D);
+  background: -webkit-linear-gradient(to right, #28A5DF, #FDC830);
+  background: linear-gradient(to right, #FDC830, #28A5DF);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -1119,7 +1110,7 @@ div h5 {
   box-shadow: 0 0 5px 0 rgba(43, 43, 43, 0.1), 0 11px 6px -7px rgba(43, 43, 43, 0.1); }
 
 .user-box.box-primary {
-  border-top-color: #F8981D; }
+  border-top-color: #28A5DF; }
 
 .box-body {
   border-top-left-radius: 0;
@@ -1136,7 +1127,7 @@ div h5 {
   padding: 3px;
   border: 3px solid #d2d6de;
   font-size: 2rem;
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .profile-username {
   font-size: 21px;
@@ -1195,17 +1186,17 @@ div h5 {
   margin: 0; }
 
 .nav-tabs-custom > .nav-tabs > li > a:hover {
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .nav-tabs-custom > .nav-tabs > li:not(.active) > a:hover, .nav-tabs-custom > .nav-tabs > li:not(.active) > a:focus, .nav-tabs-custom > .nav-tabs > li:not(.active) > a:active {
   border-color: transparent; }
 
 .nav-tabs-custom > .nav-tabs > li.active {
-  border-top-color: #F8981D; }
+  border-top-color: #28A5DF; }
 
 .nav-tabs-custom > .nav-tabs > li.active > a, .nav-tabs-custom > .nav-tabs > li.active:hover > a {
   background-color: #fff;
-  color: #F8981D; }
+  color: #28A5DF; }
 
 .nav-tabs-custom > .nav-tabs > li.active > a {
   border-top-color: transparent;
@@ -2499,8 +2490,8 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-primary, .swal-button--confirm {
   color: #fff;
-  background-color: #F8981D !important;
-  border-color: #F8981D !important; }
+  background-color: #28A5DF !important;
+  border-color: #28A5DF !important; }
 
 .btn-primary:hover, .swal-button--confirm:hover {
   color: #fff;
@@ -3197,7 +3188,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #F8981D !important; }
+  background-color: #28A5DF !important; }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6D6461;
@@ -3445,7 +3436,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background-color: #e0dcdb; }
 
 .custom-control-label {
-  font-family: var(--Livvic-font);
+  font-family: "Lexend Deca", cursive;
   font-weight: 400;
   position: relative;
   margin-bottom: 0;

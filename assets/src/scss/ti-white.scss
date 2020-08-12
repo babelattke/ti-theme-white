@@ -3,7 +3,7 @@
 // ======================================================================== //
 //
 // Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200;400&family=Lexend+Deca&family=Livvic:wght@200;400&family=Poppins:wght@200;300;400&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@200;400&family=Lexend+Deca&family=Livvic:wght@200;400&family=Poppins:wght@200;300;400&display=swap');
 
 //
 // Helpers: Variables, Functions, Mixins
@@ -508,7 +508,7 @@ color: $body-color;
     padding: 0 .4rem;
     text-transform: uppercase;
     text-decoration: none;
-    color:$white  
+    color: $white  
 }
 
 .footer .footer-links h6 {
@@ -4892,7 +4892,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .custom-control-label {
-    font-family: var(--Livvic-font);
+    font-family: $font-family-sans-serif;
     font-weight: 400;
     position: relative;
     margin-bottom: 0;

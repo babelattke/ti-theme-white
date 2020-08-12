@@ -29,14 +29,5 @@
                 </div>
             <?php } ?>
         </li>
-    <?php } ?>
-    <!-- Note: Style changes needed -->
-    <li class="nav-item form-inline">        
-        <form class="form-inline">
-            <a href="#" class="lang-button" id="lang-switcher" >
-                <!-- Get the igniter.translation.locale session, if null, display, 'EN' -->
-                <?= (session('locale') == 'en' || is_null(session('locale'))) ? 'FR' : 'EN' ?>
-            </a>
-        </form>
-    </li>
+    <?php } ?>    
 </ul>
